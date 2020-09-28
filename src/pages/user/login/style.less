@@ -1,0 +1,80 @@
+@import '~antd/es/style/themes/default.less';
+
+.main {
+  // width: 24.9%;
+  width: 25%;
+  position: fixed;
+
+  @bg-ratio: 1972 / 700;
+  @bg-height: calc(100vw / @bg-ratio);
+  @img-bottom: calc(@bg-height * 0.178);
+  @form-offset: calc(@bg-height - @img-bottom);
+  // 背景图片垂直定位
+  // margin: @margin-top auto 0;
+  // top: 110px;
+  // right: 18%;
+  top: 128px;
+  right: 17.58%;
+  transform: translateY(calc(@form-offset - 100%));
+  // margin-right: 18%;
+  background: #fff;
+  // min-width: 308px;
+  // min-height: 314px;
+  border-radius: 5px;
+  padding: 0 1% 8px;
+  // @media screen and (max-width: 1100px) {
+  //   min-width: 275px;
+  //   // left: 50%;
+  //   top: 20%;
+  //   // transform: translateX(-50%);
+  // }
+  // @media screen and (max-width: 1300px), (max-width: @screen-sm), (max-width: @screen-md-min) {
+  //   width: 95%;
+  //   margin: 0 auto;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  // }
+  // @media screen and (max-width: @screen-sm), (max-width: @screen-md-min) {
+  @media screen and (max-width: 1056px) {
+    width: 95%;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .icon {
+    margin-left: 16px;
+    color: @text-color-secondary;
+    font-size: 24px;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: @primary-color;
+    }
+  }
+
+  .other {
+    margin-top: 24px;
+    line-height: 22px;
+    text-align: left;
+
+    .register {
+      float: right;
+    }
+  }
+
+  :global {
+    .antd-pro-login-submit {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+  .autoLogin {
+    float: right;
+  }
+  .loginBtn {
+    border-radius: 10px;
+  }
+}

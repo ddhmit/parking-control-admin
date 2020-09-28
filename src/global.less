@@ -1,0 +1,111 @@
+@import '~antd/es/style/themes/default.less';
+
+html,
+body,
+#root {
+  height: 100%;
+  min-width: 500px;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// 兼容IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+#root {
+  //  全局实现 footer sticky 样式类
+  --global-header-height: 64px;
+  --global-footer-height: 94px;
+  --ant-pro-basicLayout-content-margin: 24px;
+  :global {
+    /* sticky footer */
+    .ant-layout-content.ant-pro-basicLayout-content.ant-pro-basicLayout-has-header {
+      min-height: calc(
+        100vh - var(--global-header-height) - var(--global-footer-height) -
+          (var(--ant-pro-basicLayout-content-margin) * 2)
+      );
+    }
+    .ant-layout-footer {
+      min-height: var(--global-footer-height);
+    }
+    /* 清除浮动 */
+    .clear-fix {
+      *zoom: 1;
+      &::before,
+      &::after {
+        display: table;
+        content: '';
+        height: 0;
+        clear: both;
+        visibility: hidden;
+      }
+    }
+  }
+}
+
+// notification message 自动换行
+.ant-notification-notice-with-icon .ant-notification-notice-message {
+  overflow: hidden;
+  word-break: break-word;
+}
+// notification description 自动换行
+.ant-notification-notice-with-icon .ant-notification-notice-description {
+  overflow: hidden;
+  white-space: normal;
+  height: auto;
+  word-break: break-all;
+}
+
+// 关闭 sorter 的样式类
+.ant-table {
+  .close-sorter-icon {
+    .ant-table-filter-column-title {
+      padding: 12px 8px !important;
+    }
+    .ant-table-filter-trigger-container {
+      display: none;
+    }
+  }
+}

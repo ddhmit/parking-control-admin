@@ -1,0 +1,52 @@
+.detailModalWrapper {
+  :global {
+    .ant-modal {
+      min-width: 400px;
+    }
+    .ant-modal-body {
+      max-height: 75vh;
+      height: 75vh;
+      .ant-card,
+      .ant-card-body {
+        height: 100%;
+      }
+      .ant-card-body {
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.shopStaffListWrapper {
+  width: 100%;
+  :global(.ant-descriptions-item-content) {
+    width: 100%;
+  }
+}
+
+:global {
+  .review-shop-detail-modal {
+    .ant-modal-footer {
+      text-align: center;
+      .ant-btn-primary {
+        margin-left: 5%;
+      }
+    }
+  }
+
+  // 图片部分
+  .photo-item {
+    vertical-align: top;
+    > span {
+      vertical-align: inherit;
+    }
+    .ant-divider {
+      margin: 10px 0;
+    }
+  }
+}
+
+.identityCard {
+  width: 100%;
+  max-width: 200px;
+}

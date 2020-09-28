@@ -1,0 +1,79 @@
+.cameraCardTitleWrapper {
+  display: flex;
+  justify-content: space-between;
+  :global {
+    .ant-badge-status {
+      line-height: 29px;
+    }
+  }
+}
+
+.cameraCardTitle {
+  max-width: 80%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  padding-right: 5px;
+}
+
+.cameraCardOpenBtn {
+  float: right;
+  margin-right: 24px;
+}
+
+.cameraCardDesc {
+  display: flex;
+  justify-content: space-between;
+  // min-height: 234px;
+  height: 234px;
+  overflow: hidden;
+  :global {
+    .info {
+      width: 40%;
+      padding-right: 5px;
+      max-height: 100%;
+      margin: 0;
+    }
+    .car-license {
+      .ant-descriptions-item-content {
+        color: #f50;
+      }
+    }
+    .car-status--in {
+      .ant-descriptions-item-content {
+        color: #87d068;
+      }
+    }
+    .car-status--out {
+      .ant-descriptions-item-content {
+        color: #2db7f5;
+      }
+    }
+    .img-wrapper {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: fl;
+      align-items: center;
+    }
+    .light-box:first-of-type {
+      // height: 50%;
+      margin-bottom: 5px;
+      height: 145px;
+    }
+    .light-box:last-of-type {
+      height: 74px;
+    }
+    .img {
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: top;
+    }
+    .ant-descriptions-item {
+      padding: 0;
+    }
+  }
+}

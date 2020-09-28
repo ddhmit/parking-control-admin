@@ -1,0 +1,38 @@
+.listModalWrapper {
+  :global {
+    .ant-modal-body {
+      max-height: 75vh;
+      height: 75vh;
+      .ant-pro-table {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      .ant-card {
+        flex: 1;
+        overflow: auto;
+      }
+    }
+  }
+}
+
+.manualChargeModalWrapper {
+  :global {
+    .ant-modal {
+      min-width: 400px;
+    }
+    .ant-modal-body {
+      max-height: 75vh;
+      .ant-radio-group {
+        .ant-radio-button-wrapper {
+          margin: 0 10px 10px 0;
+          width: 78px;
+          text-align: center;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}
